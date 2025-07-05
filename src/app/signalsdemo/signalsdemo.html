@@ -1,0 +1,10 @@
+<p>signalsdemo works!</p>
+<div style="display: flex; gap: 10px; flex-direction: column;">
+  <button style="width: 96px;" (click)="incrementCounter()">Increment Signal</button>
+  <span>{{ count() }}</span>
+  <span>{{ age() }}</span>
+</div>
+
+@if(displayPopup()){
+  <span>Hellllooooo</span>
+}
