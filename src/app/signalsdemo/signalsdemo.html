@@ -1,10 +1,24 @@
-<p>signalsdemo works!</p>
-<div style="display: flex; gap: 10px; flex-direction: column;">
-  <button style="width: 96px;" (click)="incrementCounter()">Increment Signal</button>
+<!-- <p>signalsdemo works!</p>
+<div style="display: flex; gap: 10px; flex-direction: column">
+  <button style="width: 96px" (click)="incrementCounter()">
+    Increment Signal
+  </button>
   <span>{{ count() }}</span>
   <span>{{ age() }}</span>
 </div>
 
 @if(displayPopup()){
-  <span>Hellllooooo</span>
+<span>Hellllooooo</span>
+}  -->
+@for(user of users; track user) {
+  @if($odd){
+    <p style="background-color: red;">{{ user }}</p>
+  }
+  @if($even) {
+    <p style="background-color: green;">{{ user }}</p>
+  }
+<!-- <p style="color: red">{{ $count }}</p> -->
+}
+@empty {
+  <p>No users</p>
 }
